@@ -1,19 +1,225 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/9e17b5252e.js" crossorigin="anonymous"></script>
-        <link href="./output.css" rel="stylesheet">
-        <title> AnkurAlpha's github page </title>
+        <title>AnkurAlpha's github page</title>
+        <link rel="stylesheet" href="output.css">
     </head>
+
     <body>
-        <nav id="navbar" class="flex justify-between bg-black p-3 rounded-lg">
-            <div id="logo" class="flex gap-2 items-center">
-                <img src="./assests/ankur.png" alt="ankur logo" class="w-10 h-10">
-                <span class="text-white font-medium font-Inter" > AnkurAlpha </span>
+        <!-- navbar -->
+        <nav class="p-3 flex bg-black justify-between items-center ">
+            <div id="brand" class="flex gap-2 items-center flex-1 ">
+                <div class="group flex items-center gap-2">
+                    <div class="group-hover:rotate-180 transition duration-700">
+                        <img src="./assests/ankur.png" class="object-cover max-w-12 max-h-12
+                                  group-hover:rotate-180 transition duration-700">
+                    </div>
+                    <span class="text-lg font-medium font-Inter group-hover:font-bold
+                        transition duration-1000"> AnkurAlpha </span>
+                </div>
             </div>
+            <div id="nav-menu" class="hidden lg:flex gap-5">
+            <a href="#" class="font-medium hover:bg-primary rounded-lg p-2 transition"> Home </a>
+            <a href="#" class="font-medium hover:bg-primary rounded-lg p-2 transition"> Github </a>
+            <a href="#" class="font-medium hover:bg-primary rounded-lg p-2 transition"> Gitlab </a>
+            <a href="#" class="font-medium hover:bg-primary rounded-lg p-2 transition"> Blogs </a>
+            <a href="#" class="font-medium hover:bg-primary rounded-lg p-2 transition"> Projects </a>
+            </div>
+            <div class="flex-1 hidden lg:flex justify-end" >
+                <button
+                        class="flex gap-2 items-center border border-grey-100 px-6 py-2 rounded-lg
+                               hover:border-primary transition group ">
+                    <img src="./assests/YouTube.jpg" alt="" class="bg-gray-300 max-w-8 max-h-8 rounded transition">
+                    <span class="group-hover:font-bold transition duration-300"> YouTube </span>
+                    <i class="fa-solid fa-arrow-right transition group-hover:translate-x-1"></i>
+                </button>
+            </div>
+            <button class="p-2 lg:hidden" onclick="handlemenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <!-- for mobile devices -->
+            <div id="nav-dialog" class="fixed z-10 hidden lg:hidden bg-black inset-0 p-3">
+                <!--
+                    inset-0 : will cover the whole window
+                    hidden : hidden initially
+                    z-10 : will define the z index
+                    md:hidden : whenever it is greater than medium then it should get hidden
+                -->
+                <div id="nav-bar" class="flex justify-between">
+                    <div id="brand" class="flex gap-2 items-center flex-1 ">
+                        <div class="group flex items-center gap-2">
+                            <div class="group-hover:rotate-180 transition duration-700">
+                                <img src="./assests/ankur.png" class="object-cover max-w-12 max-h-12
+                                          group-hover:rotate-180 transition duration-700">
+                            </div>
+                            <span class="text-lg font-medium font-Inter group-hover:font-bold
+                                         transition duration-1000"> AnkurAlpha </span>
+                        </div>
+                    </div>
+                    <button class="p-2 text-gray-300" onclick="handlemenu()">
+                        <i class="fa-solid fa-xmark text-gray-300"></i>
+                        <!-- this one is note working , not able to show the x mark-->
+                    </button>
+                </div>
+                <div class="mt-6">
+                    <a href="#" class="font-medium m-3 p-3 bg-black
+                             hover:bg-primary rounded-lg block hover:font-bold transition">
+                        Github </a>
+                    <a href="#" class="font-medium m-3 p-3 bg-black
+                             hover:bg-primary rounded-lg block hover:font-bold transition">
+                        Gitlab </a>
+                    <a href="#" class="font-medium m-3 p-3 bg-black
+                             hover:bg-primary
+                             rounded-lg block hover:font-bold">
+                        Blogs </a>
+                    <a href="#" class="font-medium m-3 p-3 bg-black
+                             hover:bg-primary rounded-lg block hover:font-bold transition">
+                        Projects </a>
+                    <!-- block : will conver <a> into block instead inline element -->
+                </div>
+                <div class="h-[1px] bg-primary"> </div>
+                <button class="flex gap-2 m-3  items-center px-6
+                               py-4 rounded-lg hover:bg-primary w-full">
+                    <img src="./assests/YouTube.jpg" alt="" class="bg-gray-300 max-w-8 max-h-8 rounded ">
+                    <span> Youtube </span>
+                </button>
+            </div>
+            <!-- fixed div -->
         </nav>
+
+        <!-- main-->
+        <main>
+            <!-- Main section -->
+            <div id="main" class = "min-h-screen bg-red-100 bg-gradient-to-br
+                     from-purple-950 via-[rgb(35,0,0)] to-black">
+                <!-- min-h-screen : minimum height of screen
+                    bg-gradient-to-br : background gradient to bottom right
+                    from-purple-950 : start from purple
+                    via-[rgb(..)] : the middle color
+                    to-black : ending to black
+                -->
+                <div id="main-container" class="max-w-4xl mx-auto px-6 pb-32 flex flex-col pt-6 sm:items-center sm:text-center">
+                    <div id="version-text" class ="flex my-6 gap-2 items-center border border-red-900 rounded-lg
+                             p-1 bg-gradient-to-br from-black via-[rgb(50,0,0)] to-primary w-fit
+                             hover:bg-gradient-to-br hover:from-black hover:via-primary hover:to-black
+                             shadow-md hover:shadow-lg shadow-black hover:shadow-black hover:-translate-y-1
+                             transition group duration-300">
+                        <div class="w-2 h-2 bg-black rounded-full border-red-500 border"></div>
+                        <p class="font-Inter font-bold">
+                        AnkurAlpha's <span class="font-display font-extrabold text-red-500" >profile</span>
+                        <i class="fa-solid fa-arrow-right text-red-500
+                                  group-hover:translate-x-1 transition "></i>
+                        </p>
+                    </div>
+                    <div id="main-features" class="gap-8 my-6 flex group hover:-translate-y-1
+                             duration-300 transition" >
+                             <div class ="flex justify-center gap-2 items-center text-red-300
+                                          group-hover:text-white transition duration-300">
+                                 <i class="fa-brands fa-linux"></i>
+                                 <p> Linux </p>
+                             </div>
+                             <div class ="flex justify-center gap-2 items-center text-red-300
+                                          group-hover:text-white transition duration-300">
+                                 <i class="fa-regular fa-file-code"></i>
+                                 <p> Coding </p>
+                             </div>
+                             <div class ="flex justify-center gap-2 items-center text-red-300
+                                          group-hover:text-white transition duration-300">
+                                 <i class="fa-solid fa-book-open-reader"></i>
+                                 <p> Learning </p>
+                             </div>
+                    </div>
+                    <h1 class="font-Inter hover:-translate-y-1 hover:font-medium leading-snug transition duration-200
+                               text-3xl sm:text-5xl">
+                        Welcome to my home page !
+                    </h1>
+                    <p class="pt-4 text-xl sm:text-2xl mt-1 sm:mt-8 sm:leading-normal">
+                    This is a github page for my profile and to showcase my projects.
+                    </p>
+                    <div id="buttons-containter" class="mt-12 flex flex-col sm:flex-row gap-4">
+                        <button class="px-8 py-3 font-semibold rounded-lg text-white bg-primary shadow-sm
+                                       shadow-black hover:bg-opacity-70 transition
+                                       hover:-translate-y-1
+                                       hover:shadow-lg hover:shadow-black "> Linkedin </button>
+                        <button class="px-8 py-3 font-semibold rounded-lg text-primary shadow-sm
+                                       shadow-black hover:text-white border border-primary transition
+                                       hover:-translate-y-1 hover:shadow-lg
+                                       hover:shadow-black hover:border-red-700 "> Twitter </button>
+                    </div>
+                </div>
+                <div id="companies-container" class="flex flex-col gap-8 ">
+                    <div id="companies-title" class="flex justify-center gap-2 ">
+                        <div class="max-w-96 group ">
+                            <i class="fa-solid fa-angles-down translate-y-2
+                                      group-hover:translate-y-4 group-hover:font-bold
+                                      transition duration-300"></i>
+                            <span class="font-bold group-hover:font-extrabold">
+                                Technologies I use or worked on in past</span>
+                            <i class="fa-solid fa-angles-down translate-y-2
+                                      group-hover:translate-y-4 group-hover:font-bold
+                                      transition duration-300"></i>
+                        </div>
+                    </div>
+                    <div id="companies-linegroup" class="flex flex-col gap-6 md:gap-8 ">
+                        <div id="line1" class="flex gap-4 md:gap-6 wscreen justify-center ">
+                            <div id="neovim" class="flex flex-col min-w-20 min-h-20 items-center
+                                        justify-center bg-primary rounded-lg border border-red-700
+                                        shadow-black shadow-md hover:shadow-black hover:shadow-lg
+                                        transition hover:-translate-y-2 hover:border-red-500 group
+                                        md:min-h-24 md:min-w-24">
+                                <img class="h-12 w-12 md:h-16 md:w-16 " src="./assests/Neovim_logo.png">
+                                <span class="text-[12px] md:text-[16px] font-semibold
+                                    group-hover:font-extrabold transition duration-300">Neovim</span>
+                            </div>
+                            <div id="linux" class="flex flex-col min-w-20 min-h-20 items-center
+                                        justify-center bg-primary rounded-lg border border-red-700
+                                        shadow-black shadow-md hover:shadow-black hover:shadow-lg
+                                        transition hover:-translate-y-2 hover:border-red-500 group
+                                        md:min-h-24 md:min-w-24">
+                                <img class="h-12 w-12 md:h-16 md:w-16 " src="./assests/Linux2.png">
+                                <span class="text-[12px] md:text-[16px] font-semibold
+                                    group-hover:font-extrabold transition duration-300">Linux</span>
+                            </div>
+                            <div id ="python" class="flex flex-col min-w-20 min-h-20 items-center
+                                        justify-center bg-primary rounded-lg border border-red-700
+                                        shadow-black shadow-md hover:shadow-black hover:shadow-lg
+                                        transition hover:-translate-y-2 hover:border-red-500 group
+                                        md:min-h-24 md:min-w-24">
+                                <img class="h-12 w-12 md:h-16 md:w-16 " src="./assests/python.png">
+                                <span class="text-[12px] md:text-[16px] font-semibold
+                                    group-hover:font-extrabold transition duration-300">Python</span>
+                            </div>
+                            <div id="cpp" class="flex flex-col min-w-20 min-h-20 items-center
+                                        justify-center bg-primary rounded-lg border border-red-700
+                                        shadow-black shadow-md hover:shadow-black hover:shadow-lg
+                                        transition hover:-translate-y-2 hover:border-red-500 group
+                                        md:min-h-24 md:min-w-24">
+                                <img class="h-12 w-12 md:h-16 md:w-16 " src="./assests/cpp2.png">
+                                <span class="text-[12px] md:text-[16px] font-semibold
+                                    group-hover:font-extrabold transition duration-300">C++</span>
+                            </div>
+                            <!--break from here -->
+                        </div>
+                        <div id="line2" class="flex gap-4 md:gap-6 wscreen justify-center ">
+                            <div id="tailwindcss" class="flex flex-col min-w-20 min-h-20 items-center
+                                        justify-center bg-primary rounded-lg border border-red-700
+                                        shadow-black shadow-md hover:shadow-black hover:shadow-lg
+                                        transition hover:-translate-y-2 hover:border-red-500 group
+                                        md:min-h-24 md:min-w-24">
+                                <img class="h-12 w-12 md:h-16 md:w-16 " src="./assests/tailwindcss.png">
+                                <span class="text-[12px] md:text-[16px] font-semibold
+                                    group-hover:font-extrabold transition duration-300">Tailwindcss</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[100px]"> </div>
+            </div>
+        </main>
+        <script src="script.js"> </script>
     </body>
 </html>
