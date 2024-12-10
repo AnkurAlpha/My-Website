@@ -19,27 +19,32 @@
                                   group-hover:rotate-180 transition duration-700">
                     </div>
                     <span class="text-lg font-medium font-Inter group-hover:font-bold
-                        transition duration-1000"> AnkurAlpha </span>
+                        transition duration-1000 text-white"> AnkurAlpha </span>
                 </div>
             </div>
             <div id="nav-menu" class="hidden lg:flex gap-5">
-            <a href="#" class="font-medium hover:bg-primary rounded-lg p-2 transition"> Home </a>
-            <a href="#" class="font-medium hover:bg-primary rounded-lg p-2 transition"> Github </a>
-            <a href="#" class="font-medium hover:bg-primary rounded-lg p-2 transition"> Gitlab </a>
-            <a href="#" class="font-medium hover:bg-primary rounded-lg p-2 transition"> Blogs </a>
-            <a href="#" class="font-medium hover:bg-primary rounded-lg p-2 transition"> Projects </a>
+            <a href="#" class="font-medium hover:bg-primary rounded-lg p-2 transition text-white">
+                Home </a>
+            <a href="#" class="font-medium hover:bg-primary rounded-lg p-2 transition text-white">
+                Github </a>
+            <a href="#" class="font-medium hover:bg-primary rounded-lg p-2 transition text-white">
+                Gitlab </a>
+            <a href="#" class="font-medium hover:bg-primary rounded-lg p-2 transition text-white">
+                Blogs </a>
+            <a href="#" class="font-medium hover:bg-primary rounded-lg p-2 transition text-white">
+                Projects </a>
             </div>
             <div class="flex-1 hidden lg:flex justify-end" >
                 <button
                         class="flex gap-2 items-center border border-grey-100 px-6 py-2 rounded-lg
                                hover:border-primary transition group ">
                     <img src="./assests/YouTube.jpg" alt="" class="bg-gray-300 max-w-8 max-h-8 rounded transition">
-                    <span class="group-hover:font-bold transition duration-300"> YouTube </span>
-                    <i class="fa-solid fa-arrow-right transition group-hover:translate-x-1"></i>
+                    <span class="group-hover:font-bold transition duration-300 text-white"> YouTube </span>
+                    <i class="fa-solid fa-arrow-right transition group-hover:translate-x-1 text-white"></i>
                 </button>
             </div>
             <button class="p-2 lg:hidden" onclick="handlemenu()">
-                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars text-white"></i>
             </button>
             <!-- for mobile devices -->
             <div id="nav-dialog" class="fixed z-10 hidden lg:hidden bg-black inset-0 p-3">
@@ -57,27 +62,33 @@
                                           group-hover:rotate-180 transition duration-700">
                             </div>
                             <span class="text-lg font-medium font-Inter group-hover:font-bold
-                                         transition duration-1000"> AnkurAlpha </span>
+                                         transition duration-1000 text-white"> AnkurAlpha </span>
                         </div>
                     </div>
-                    <button class="p-2 text-gray-300" onclick="handlemenu()">
-                        <i class="fa-solid fa-xmark text-gray-300"></i>
+                    <button class="p-2 text-white" onclick="handlemenu()">
+                        <i class="fa-solid fa-xmark text-white font-white"></i>
                         <!-- this one is note working , not able to show the x mark-->
                     </button>
                 </div>
                 <div class="mt-6">
                     <a href="#" class="font-medium m-3 p-3 bg-black
-                             hover:bg-primary rounded-lg block hover:font-bold transition">
+                             hover:bg-primary rounded-lg block hover:font-bold transition
+                             text-white">
+                        Home </a>
+                    <a href="#" class="font-medium m-3 p-3 bg-black
+                             hover:bg-primary rounded-lg block hover:font-bold transition
+                             text-white">
                         Github </a>
                     <a href="#" class="font-medium m-3 p-3 bg-black
-                             hover:bg-primary rounded-lg block hover:font-bold transition">
+                             hover:bg-primary rounded-lg block hover:font-bold transition
+                             text-white">
                         Gitlab </a>
                     <a href="#" class="font-medium m-3 p-3 bg-black
-                             hover:bg-primary
-                             rounded-lg block hover:font-bold">
+                             hover:bg-primary rounded-lg block hover:font-bold text-white">
                         Blogs </a>
                     <a href="#" class="font-medium m-3 p-3 bg-black
-                             hover:bg-primary rounded-lg block hover:font-bold transition">
+                             hover:bg-primary rounded-lg block hover:font-bold transition
+                             text-white">
                         Projects </a>
                     <!-- block : will conver <a> into block instead inline element -->
                 </div>
@@ -85,7 +96,7 @@
                 <button class="flex gap-2 m-3  items-center px-6
                                py-4 rounded-lg hover:bg-primary w-full">
                     <img src="./assests/YouTube.jpg" alt="" class="bg-gray-300 max-w-8 max-h-8 rounded ">
-                    <span> Youtube </span>
+                    <span class="text-white"> Youtube </span>
                 </button>
             </div>
             <!-- fixed div -->
@@ -109,7 +120,7 @@
                              shadow-md hover:shadow-lg shadow-black hover:shadow-black hover:-translate-y-1
                              transition group duration-300">
                         <div class="w-2 h-2 bg-black rounded-full border-red-500 border"></div>
-                        <p class="font-Inter font-bold">
+                        <p class="font-Inter font-bold text-white">
                         AnkurAlpha's <span class="font-display font-extrabold text-red-500" >profile</span>
                         <i class="fa-solid fa-arrow-right text-red-500
                                   group-hover:translate-x-1 transition "></i>
@@ -137,7 +148,7 @@
                                text-3xl sm:text-5xl">
                         Welcome to my home page !
                     </h1>
-                    <p class="pt-4 text-xl sm:text-2xl mt-1 sm:mt-8 sm:leading-normal">
+                    <p class="pt-4 text-xl sm:text-2xl mt-1 sm:mt-8 sm:leading-normal text-white">
                     This is a github page for my profile and to showcase my projects.
                     </p>
                     <div id="buttons-containter" class="mt-12 flex flex-col sm:flex-row gap-4">
@@ -173,7 +184,8 @@
                                         md:min-h-24 md:min-w-24">
                                 <img class="h-12 w-12 md:h-16 md:w-16 " src="./assests/Neovim_logo.png">
                                 <span class="text-[12px] md:text-[16px] font-semibold
-                                    group-hover:font-extrabold transition duration-300">Neovim</span>
+                                    group-hover:font-extrabold transition duration-300
+                                    text-white">Neovim</span>
                             </div>
                             <div id="linux" class="flex flex-col min-w-20 min-h-20 items-center
                                         justify-center bg-primary rounded-lg border border-red-700
@@ -182,7 +194,8 @@
                                         md:min-h-24 md:min-w-24">
                                 <img class="h-12 w-12 md:h-16 md:w-16 " src="./assests/Linux2.png">
                                 <span class="text-[12px] md:text-[16px] font-semibold
-                                    group-hover:font-extrabold transition duration-300">Linux</span>
+                                    group-hover:font-extrabold transition duration-300 text-white">
+                                    Linux</span>
                             </div>
                             <div id ="python" class="flex flex-col min-w-20 min-h-20 items-center
                                         justify-center bg-primary rounded-lg border border-red-700
@@ -191,7 +204,7 @@
                                         md:min-h-24 md:min-w-24">
                                 <img class="h-12 w-12 md:h-16 md:w-16 " src="./assests/python.png">
                                 <span class="text-[12px] md:text-[16px] font-semibold
-                                    group-hover:font-extrabold transition duration-300">Python</span>
+                                    group-hover:font-extrabold transition duration-300 text-white">Python</span>
                             </div>
                             <div id="cpp" class="flex flex-col min-w-20 min-h-20 items-center
                                         justify-center bg-primary rounded-lg border border-red-700
@@ -200,7 +213,7 @@
                                         md:min-h-24 md:min-w-24">
                                 <img class="h-12 w-12 md:h-16 md:w-16 " src="./assests/cpp2.png">
                                 <span class="text-[12px] md:text-[16px] font-semibold
-                                    group-hover:font-extrabold transition duration-300">C++</span>
+                                    group-hover:font-extrabold transition duration-300 text-white">C++</span>
                             </div>
                             <!--break from here -->
                         </div>
@@ -212,7 +225,7 @@
                                         md:min-h-24 md:min-w-24">
                                 <img class="h-12 w-12 md:h-16 md:w-16 " src="./assests/tailwindcss.png">
                                 <span class="text-[12px] md:text-[16px] font-semibold
-                                    group-hover:font-extrabold transition duration-300">Tailwindcss</span>
+                                    group-hover:font-extrabold transition duration-300 text-white">Tailwindcss</span>
                             </div>
                         </div>
                     </div>
