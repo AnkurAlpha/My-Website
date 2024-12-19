@@ -942,11 +942,6 @@ h1 ,h2 , h3{
   line-height: 1.375;
 }
 
-.text-gray-300{
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity, 1));
-}
-
 .text-primary{
   --tw-text-opacity: 1;
   color: rgb(100 0 0 / var(--tw-text-opacity, 1));
